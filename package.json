@@ -1,0 +1,23 @@
+{
+  "name": "elysia-export",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist --target bun"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@tarikjabiri/dxf": "^2.8.9",
+    "elysia": "^1.2.25",
+    "jszip": "^3.10.1",
+    "makerjs": "^0.18.1",
+    "pdf-lib": "^1.17.1",
+    "potrace": "^2.1.8"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/potrace": "^2.1.5",
+    "typescript": "^5.0.0"
+  }
+}

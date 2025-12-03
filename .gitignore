@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test output files
+*.dxf
+*.svg
+output-*.zip
+
+# Test images
+*.png
+
+# Lock files (optional - uncomment to track)
+# bun.lock
+
+# Test scripts
+test-*.ts
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
