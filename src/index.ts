@@ -156,6 +156,11 @@ const app = new Elysia()
     "/export/trace",
     async ({ body, set }) => {
       try {
+        if (process.env.VERCEL === "1") {
+          set.status = 503;
+          return { error: "Image tracing is not available on serverless. Please run the backend locally for this feature." };
+        }
+
         const formData = body as { image: File; threshold?: string; format?: string };
         const { image, threshold, format } = formData;
 
