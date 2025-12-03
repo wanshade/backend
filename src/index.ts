@@ -229,8 +229,12 @@ const app = new Elysia()
       }),
     }
   )
-  .listen(3001);
+const isVercel = process.env.VERCEL === "1";
 
-console.log(`Elysia Export API running at http://localhost:${app.server?.port}`);
+if (!isVercel) {
+  app.listen(3001);
+  console.log(`Elysia Export API running at http://localhost:${app.server?.port}`);
+}
 
+export default app;
 export type App = typeof app;
